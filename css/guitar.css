@@ -1,4 +1,12 @@
 :root {
+    /* COLORS */
+    --clr-neutral-200: #E9E3E6;
+    --clr-neutral-300: #B2B2B2;
+    --clr-neutral-900: #0D0C1D;
+    --clr-accent-purple: #824C71;
+    --clr-accent-purple-light: #d86fb7;
+    --clr-accent-blue: #0B4F6C;
+
     /* FONTS */
     --ff-regular: "Hind Guntur", sans-serif;
     --fw-regular: 400;
@@ -41,7 +49,9 @@ picture {
 
 
 body {
-    background-color: gray;
+    font-family: var(--ff-regular);
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-300);
 }
 
 .nav-header {
@@ -51,15 +61,22 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
-
+/* LOGO LINK (MUSIKKINSTRUMENT SIDE) */
 .logo-link {
     padding-block: var(--size-400);
-    text-decoration: none;
+    color: var(--clr-neutral-900);
     font-size: var(--size-700);
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: var(--fw-bold);
+    text-decoration-color: var(--clr-accent-purple-light);
 }
 
+.logo-link:hover {
+    color: var(--clr-accent-purple-light);
+    text-decoration: none;
+}
+
+/* CONTAINER FOR BILDER MED GITAR */
 .guitar-imgs__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,10 +95,32 @@ body {
     }
 }
 
+.intro {
+    max-width: 80vw;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: clamp(var(--fs-600), 6vw, var(--fs-800));
+}
+
 
 /* UTILITY CLASS */
 
 .border-side {
     border-left: 2px dashed black;
     border-right: 2px dashed black;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 2rem;
+}
+
+.flow > * + * {
+    margin-block: var(--flow-space, 1rem);
 }
