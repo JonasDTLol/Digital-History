@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.top-border {
+    background-color: rgb(48, 41, 41);
+    height: 7vh;
+}
+
+.fbox {
+    display: flex;
+    justify-content: center
+}
+  
+#box1 {
+    border: solid 2px black;
+    height: 300px;
+    width: 150vh;
+}
+
+.fbox2 {
+    display: flex;
+    justify-content: center;
+}
+
+#box2 {
+    border: solid 3px black;
+}
