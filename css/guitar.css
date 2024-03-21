@@ -159,6 +159,15 @@ body {
     z-index: -1;
 }
 
+.acoustic-list-wrapper {
+    text-align: left;
+    width: fit-content;
+}
+
+.acoustic-list {
+    margin-left: 1.5rem;
+}
+
 .hollowbody-section {
     position: relative;
     padding-block: 3rem;
@@ -200,6 +209,10 @@ body {
     justify-content: center;
     align-items: center;
     margin-block: 2rem;
+}
+
+.flex-row {
+    display: flex;
 }
 
 .flow > * + * {
