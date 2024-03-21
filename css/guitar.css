@@ -6,6 +6,7 @@
     --clr-accent-purple: #824C71;
     --clr-accent-purple-light: #d86fb7;
     --clr-accent-blue: #0B4F6C;
+    --clr-text-white: #fbfcff;
 
     /* FONTS */
     --ff-regular: "Hind Guntur", sans-serif;
@@ -52,20 +53,30 @@ body {
     font-family: var(--ff-regular);
     color: var(--clr-neutral-900);
     background-color: var(--clr-neutral-300);
+    background-image: url(../Images/asfalt-light-tp-bg.png);
 }
 
-.nav-header {
+.primary-header {
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.541);
+    z-index: 1;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+}
+
+.nav-header {
+    padding-block: 1rem;
+
 }
 /* LOGO LINK (MUSIKKINSTRUMENT SIDE) */
 .logo-link {
     padding-block: var(--size-400);
     color: var(--clr-neutral-900);
-    font-size: var(--size-700);
+    font-size: var(--fs-700);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: var(--fw-bold);
     text-decoration-color: var(--clr-accent-purple-light);
@@ -102,7 +113,7 @@ body {
     position: absolute;
     inset: 0;
     background-color: hsla(0, 0%, 0%, 0.6);
-    font-size: var(--fs-800);
+    font-size: clamp(1rem, 5vw, var(--fs-800));
     font-weight: var(--fw-bold);
     text-shadow: 3px 3px var(--clr-neutral-900);
     opacity: 0;
@@ -127,6 +138,52 @@ body {
 
 .page-title {
     font-size: clamp(var(--fs-600), 6vw, var(--fs-800));
+}
+
+.acoustic-section {
+    position: relative;
+    padding-block: 3rem;
+    color: var(--clr-text-white);
+}
+
+.acoustic-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 4px dashed var(--clr-neutral-300);
+    border-bottom: 4px dashed var(--clr-neutral-300);
+    background-color: var(--clr-accent-blue);
+    background-image: url(../Images/asfalt-light-tp-bg.png);
+    transform: skewY(358deg);
+    z-index: -1;
+}
+
+.hollowbody-section {
+    position: relative;
+    padding-block: 3rem;
+    color: var(--clr-text-white);
+}
+
+.hollowbody-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 4px dashed var(--clr-neutral-300);
+    border-bottom: 4px dashed var(--clr-neutral-300);
+    background-color: var(--clr-accent-purple);
+    background-image: url(../Images/asfalt-light-tp-bg.png);
+    transform: skewY(2deg);
+    z-index: -1;
+}
+
+.primary-footer {
+    display: grid;
+    place-content: center;
+    min-height: 5rem;
+    border-top: 3px dashed var(--clr-neutral-300);
+    background-color: var(--clr-neutral-900);
 }
 
 
