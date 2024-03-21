@@ -85,6 +85,7 @@ body {
 }
 
 .guitar-img__cards {
+    position: relative;
     border-top: 2px dashed black;
     border-bottom: 2px dashed black;
     background-image: url(../Images/guitar-img/gray-paper-texture.jpg);
@@ -95,8 +96,31 @@ body {
     }
 }
 
+.guitar-img__overlay {
+    display: grid;
+    place-content: center;
+    position: absolute;
+    inset: 0;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    text-shadow: 3px 3px var(--clr-neutral-900);
+    opacity: 0;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+    & a {
+        color: var(--clr-neutral-200);
+        text-decoration: none;
+    }
+}
+
+.guitar-img__overlay:hover {
+    opacity: 1;
+}
+
 .intro {
-    max-width: 80vw;
+    max-width: 70vw;
     margin-inline: auto;
     text-align: center;
 }
