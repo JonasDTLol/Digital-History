@@ -1,30 +1,99 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+/** Top border **/
 .top-border {
-    background-color: rgb(48, 41, 41);
+    background-color: rgb(77, 67, 67);
     height: 7vh;
+    text-align: center;
+    color: rgb(147, 214, 93);
+    font-size: 25px;
 }
 
+
+/** Flexbox **/
 .fbox {
     display: flex;
-    justify-content: center
-}
-  
-#box1 {
-    border: solid 2px black;
-    height: 300px;
-    width: 150vh;
+    justify-content: center;
 }
 
 .fbox2 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 108px;
+}
+
+.fbox3 {
+    display: flex;
+    position: relative;
+    left: 238px;
+}
+
+
+/** Flexbox items **/
+#box1 {
+    border: solid 2px rgb(77, 67, 67);
+    height: 300px;
+    width: 1424px;
+    text-align: center;
+    background-color: rgb(235, 210, 179);
+    font-size: 13px;
+    border-radius: 25px;
+    color: rgb(46, 34, 34);
 }
 
 #box2 {
-    border: solid 3px black;
+    border: solid 2px rgb(77, 67, 67);
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    background-color: rgb(235, 210, 179);
+    font-size: 13px;
+    border-radius: 25px;
+    color: rgb(46, 34, 34);
+}
+
+#box3 {
+    border: solid 2px rgb(77, 67, 67);
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    background-color: rgb(235, 210, 179);
+    font-size: 13px;
+    border-radius: 25px;
+    color: rgb(46, 34, 34);
+}
+
+#box4 {
+    border: solid 2px rgb(77, 67, 67);
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    background-color: rgb(235, 210, 179);
+    overflow-y: hidden;
+    border-radius: 25px;
+}
+
+#box5 {
+    border: solid 2px rgb(77, 67, 67);
+    height: 400px;
+    width: 1424px;
+    text-align: center;
+    background-color: rgb(235, 210, 179);
+    font-size: 13px;
+    border-radius: 25px;
+    color: rgb(46, 34, 34);
+}
+
+
+/** Footer **/
+.foot {
+    height: 5vh;
+    background-color: rgb(77, 67, 67);
 }
