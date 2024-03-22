@@ -18,4 +18,6 @@
 
 -Lagt til mer innhold i seksjoner
 
--Fortsettet styling
+-Ferdig stilt styling
+
+-Lagt til media queries
