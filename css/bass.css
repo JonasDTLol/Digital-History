@@ -1,10 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: rgb(213, 223, 223);
+    overflow-x: hidden;
+}
 
 /** Top border **/
 .top-border {
@@ -70,13 +73,18 @@
     color: rgb(46, 34, 34);
 }
 
+#box4-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+}
+
 #box4 {
     border: solid 2px rgb(77, 67, 67);
     height: 400px;
     width: 400px;
     text-align: center;
     background-color: rgb(235, 210, 179);
-    overflow-y: hidden;
     border-radius: 25px;
 }
 
