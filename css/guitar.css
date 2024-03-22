@@ -48,6 +48,10 @@ picture {
     max-width: 100%;
 }
 
+html {
+    line-height: 1.5;
+}
+
 
 body {
     font-family: var(--ff-regular);
@@ -178,6 +182,7 @@ body {
 .slideshow-container {
     position: relative;
     max-width: 20rem;
+    margin-inline: 2rem;
     border: 2px dashed var(--clr-neutral-900);
     background-image: url(../Images/guitar-img/gray-paper-texture.jpg);
 }
@@ -244,6 +249,41 @@ body {
     background-color: #000000;
 }
 
+/* ELECTRIC GUITAR SEKSJON */
+.electric-construction {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 2rem;
+
+    & img {
+        max-height: 40rem;
+        border: 2px dashed var(--clr-neutral-900);
+    }
+}
+
+.construction-list-container {
+    line-height: 1.7;
+    text-align: left;
+
+
+    ol {
+        counter-reset: item 
+    }
+    li {
+        display: block
+    }
+    li:before {
+        content: counters(item, ".") " ";
+        counter-increment: item; 
+        margin-right: 1rem;
+    }
+    
+    .indent {
+        margin-left: 1rem;
+    }
+}
+
+
 .hollowbody-section {
     position: relative;
     padding-block: 3rem;
@@ -289,4 +329,8 @@ body {
 
 .flow > * + * {
     margin-block: var(--flow-space, 1rem);
+}
+
+.bold {
+    font-weight: var(--fw-bold);
 }
