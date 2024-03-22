@@ -33,7 +33,7 @@
     --size-1100: 5rem;
 }
 
-
+/* CSS RESET */
 *,
 *::before,
 *::after {
@@ -110,6 +110,7 @@ body {
     }
 }
 
+/* OVERLAY DIV SOM LIGGER OVER GITAR BILDER */
 .guitar-img__overlay {
     display: grid;
     place-content: center;
@@ -150,6 +151,7 @@ body {
     color: var(--clr-text-white);
 }
 
+/* PSEUDO ELEMENT BAKGRUNN */
 .acoustic-section::before {
     content: '';
     position: absolute;
@@ -192,6 +194,7 @@ body {
     display: none;
 }
 
+/* NAVIGERING SLIDESHOW PILER */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -220,6 +223,7 @@ body {
     background-color: #0d0c1d90;
 }
 
+/* FIGCAPTION UNDER SLIDESHOW */
 .slide-text {
     padding-top: .25rem;
     border-top: 2px dashed var(--clr-neutral-900);
@@ -230,6 +234,7 @@ body {
     text-transform: uppercase;
 }
 
+/* PRIKKER FOR INDIKERING AV SLIDE KØEN */
 .slide-dots {
     margin-top: .5rem;
     text-align: center;
@@ -301,6 +306,7 @@ body {
     color: var(--clr-text-white);
 }
 
+/* PSEUDO ELEMENT BAKGRUNN */
 .hollowbody-section::before {
     content: '';
     position: absolute;
@@ -314,6 +320,7 @@ body {
     z-index: -1;
 }
 
+/* SAMMENLINGNING CONTAINER */
 .comparison {
     display: flex;
     flex-direction: column;
