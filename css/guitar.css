@@ -59,7 +59,6 @@ body {
 .primary-header {
     display: flex;
     justify-content: center;
-    position: sticky;
     top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.541);
     z-index: 1;
@@ -159,13 +158,90 @@ body {
     z-index: -1;
 }
 
+.list-slideshow-section {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 2rem;
+}
+
 .acoustic-list-wrapper {
-    text-align: left;
     width: fit-content;
+    margin-block: auto;
+    text-align: left;
 }
 
 .acoustic-list {
     margin-left: 1.5rem;
+}
+
+/* SLIDESHOW SECTION */
+.slideshow-container {
+    position: relative;
+    max-width: 20rem;
+    border: 2px dashed var(--clr-neutral-900);
+    background-image: url(../Images/guitar-img/gray-paper-texture.jpg);
+}
+
+.guitar-slide {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--clr-neutral-900);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #0d0c1d90;
+}
+
+.slide-text {
+    padding-top: .25rem;
+    border-top: 2px dashed var(--clr-neutral-900);
+    border-bottom: 2px dashed var(--clr-neutral-900);
+    color: var(--clr-neutral-900);
+    font-weight: var(--fw-bold);
+    background-image: url(../Images/guitar-img/gray-paper-texture.jpg);
+    text-transform: uppercase;
+}
+
+.slide-dots {
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #434456;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #000000;
 }
 
 .hollowbody-section {
@@ -209,10 +285,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-block: 2rem;
-}
-
-.flex-row {
-    display: flex;
 }
 
 .flow > * + * {
