@@ -52,22 +52,68 @@
             <div class="intro">
                 <h2><a id="acoustic-title">Acoustic guitars</a></h2>
                 <p>Acoustic guitars form several notable subcategories within the acoustic guitar group: classical and flamenco guitars; steel-string guitars, which include the flat-topped, or "folk", guitar; twelve-string guitars; and the arched-top guitar. The acoustic guitar group also includes unamplified guitars designed to play in different registers, such as the acoustic bass guitar, which has a similar tuning to that of the electric bass guitar.</p>
-                <div class="flex-row">
+                <div class="list-slideshow-section">
                     <div class="acoustic-list-wrapper">
-                        <h3>Types of acoustic guitars</h3>
+                        <h3>Some types of acoustic guitars</h3>
                         <ul class="acoustic-list">
                             <li>Renaissance and Baroque</li>
                             <li>Classical</li>
                             <li>Flat-top</li>
                             <li>Archtop</li>
                             <li>Resonator, resophonic or Dobros</li>
-                            <li>Steel guitar</li>
                             <li>Twelve-string</li>
                             <li>Acoustic bass</li>
                         </ul>
                     </div>
-                    <div class="acoustic-slideshow">
-                        
+
+                    <div class="slideshow-container">
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/baroque-guitar.jpg" alt="">
+                            <figcaption class="slide-text">Baroque</figcaption>
+                        </figure>
+
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/classical-guitar.webp" alt="">
+                            <figcaption class="slide-text">Classical</figcaption>
+                        </figure>
+
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/flat-top-guitar.jpg" alt="">
+                            <figcaption class="slide-text">Flat-top</figcaption>
+                        </figure>
+
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/arch-top-guitar.jpg" alt="">
+                            <figcaption class="slide-text">Archtop</figcaption>
+                        </figure>
+
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/resonator-guitar.jpg" alt="">
+                            <figcaption class="slide-text">Resonator</figcaption>
+                        </figure>
+
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/twelve-string-guitar.jpg" alt="">
+                            <figcaption class="slide-text">Twelve-string</figcaption>
+                        </figure>
+
+                        <figure class="guitar-slide">
+                            <img src="../Images/acoustic-slideshow/acoustic-bass.jpg" alt="">
+                            <figcaption class="slide-text">Acoustic Bass</figcaption>
+                        </figure>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="slide-dots">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,7 +129,7 @@
         <section class="hollowbody-section flex-container">
             <div class="intro">
                 <h2><a id="hollowbody-title">Hollowbody guitars</a></h2>
-                <p>A semi-acoustic guitar, also known as a hollow-body electric guitar, is a type of electric guitar designed to be played with a guitar amplifier featuring a fully or partly hollow body and at least one electromagnetic pickup.[1] First created in the 1930s, they became popular in jazz and blues, where they remain widely used, and the early period of rock & roll, though they were later largely supplanted by solid-body electric guitars in rock. They differ from an acoustic-electric guitar, which is an acoustic guitar thathas been fitted with some means of amplification to increase volume withoutchanging the instrument's tone.</p>
+                <p>A semi-acoustic guitar, also known as a hollow-body electric guitar, is a type of electric guitar designed to be played with a guitar amplifier featuring a fully or partly hollow body and at least one electromagnetic pickup. First created in the 1930s, they became popular in jazz and blues, where they remain widely used, and the early period of rock & roll, though they were later largely supplanted by solid-body electric guitars in rock. They differ from an acoustic-electric guitar, which is an acoustic guitar thathas been fitted with some means of amplification to increase volume withoutchanging the instrument's tone.</p>
             </div>
         </section>
     </main>
@@ -93,5 +139,34 @@
             <a href="https://github.com/JonasDTLol/Digital-History/tree/main" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
         </div>
     </footer>
+
+    <script>
+        let slideIndex = 1;
+            showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("guitar-slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 </body>
 </html>
