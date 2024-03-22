@@ -133,9 +133,10 @@ body {
     opacity: 1;
 }
 
-.intro {
-    max-width: 70vw;
+.section-wrapper {
+    max-width: 70rem;
     margin-inline: auto;
+    margin-block: 2rem;
     text-align: center;
 }
 
@@ -250,6 +251,12 @@ body {
 }
 
 /* ELECTRIC GUITAR SEKSJON */
+.electric-section {
+    display: flex;
+    flex-direction: column;
+    margin-block: 5rem;
+}
+
 .electric-construction {
     display: flex;
     justify-content: space-around;
@@ -283,6 +290,10 @@ body {
     }
 }
 
+.electric-construction-img {
+    margin-left: 1rem;
+}
+
 
 .hollowbody-section {
     position: relative;
@@ -303,12 +314,50 @@ body {
     z-index: -1;
 }
 
+.comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 2rem;
+}
+
+.comparison__title {
+    font-size: var(--fs-600);
+}
+
+.comparison-img {
+    max-width: 40rem;
+    border: 2px dashed var(--clr-neutral-200);
+}
+
 .primary-footer {
     display: grid;
     place-content: center;
     min-height: 5rem;
     border-top: 3px dashed var(--clr-neutral-300);
     background-color: var(--clr-neutral-900);
+}
+
+.footer-link {
+    width: fit-content;
+    margin-block: 3rem;
+
+    > a {
+        border: 2px dashed var(--clr-neutral-900);
+        border-radius: .25em;
+        padding: .25em .5em;
+        color: var(--clr-neutral-900);
+        background-color: var(--clr-neutral-200);
+        font-weight: var(--fw-bold);
+        text-decoration: none;
+        line-height: 1;
+    }
+
+    > a:focus, a:hover {
+        background-color: var(--clr-neutral-300);
+        text-decoration: underline;
+    }
 }
 
 
@@ -324,7 +373,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-block: 2rem;
+    margin-block: 5rem;
 }
 
 .flow > * + * {
@@ -333,4 +382,44 @@ body {
 
 .bold {
     font-weight: var(--fw-bold);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1180px) {
+    .section-wrapper {
+        margin-inline: 2rem;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .list-slideshow-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .electric-construction {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .nav-header {
+        text-align: center;
+    }
+
+    .logo-link {
+        margin-inline: auto;
+        padding-inline: .5rem;
+        font-size: var(--fs-600);
+    }
+
+    .section-wrapper {
+        margin-inline: 1rem;
+    }
 }
